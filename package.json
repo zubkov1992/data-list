@@ -1,9 +1,9 @@
 {
-  "name": "zubkov1992-data-list",
+  "name": "data-list",
   "version": "0.1.0",
   "private": false,
   "description": "Шаблон для списка.",
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zubkov1992/data-list.git"
