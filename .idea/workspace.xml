@@ -31,8 +31,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="18">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -310,7 +310,7 @@
       <workItem from="1522910406682" duration="4532000" />
       <workItem from="1522915720021" duration="200000" />
       <workItem from="1522916457446" duration="14210000" />
-      <workItem from="1522942269385" duration="8850000" />
+      <workItem from="1522942269385" duration="9113000" />
     </task>
     <task id="LOCAL-00001" summary="Дополнение package.json">
       <created>1522946212603</created>
@@ -361,11 +361,25 @@
       <option name="project" value="LOCAL" />
       <updated>1522952179451</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="...">
+      <created>1522952414118</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1522952414118</updated>
+    </task>
+    <task id="LOCAL-00009" summary="...">
+      <created>1522952614139</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1522952614139</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110106000" />
+    <option name="totallyTimeSpent" value="110369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1922" height="1057" extended-state="6" />
@@ -455,7 +469,8 @@
     <MESSAGE value="Приведение к окончательно правильному виду." />
     <MESSAGE value="idea" />
     <MESSAGE value="npmignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="npmignore" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -820,8 +835,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="18">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
