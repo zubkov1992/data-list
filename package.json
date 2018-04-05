@@ -2,6 +2,15 @@
   "name": "data-list",
   "version": "0.1.0",
   "private": true,
+  "description": "Шаблон для списка.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zubkov1992/data-list.git"
+  },
+  "author": "Andrei Zubkov",
+  "license": "MIT",
+  "homepage": "https://github.com/zubkov1992/data-list#readme",
   "dependencies": {
     "classnames": "^2.2.5",
     "material-ui": "^1.0.0-beta.36",
