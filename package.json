@@ -1,7 +1,7 @@
 {
   "name": "data-list",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "Шаблон для списка.",
   "main": "src/index.js",
   "repository": {
