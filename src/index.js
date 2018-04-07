@@ -1,4 +1,4 @@
-export {default as AppBarPages} from './components/AppBarPages';
-export {default as BottomNavigationPages} from './components/BottomNavigationPages';
-export {default as CardDataMaster} from './components/CardDataMaster';
-export {default as DrawerPages} from './components/DrawerPages';
+export {default as AppBarPages} from './AppBarPages';
+export {default as BottomNavigationPages} from './BottomNavigationPages';
+export {default as CardDataMaster} from './CardDataMaster';
+export {default as DrawerPages} from './DrawerPages';

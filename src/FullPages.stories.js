@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import { withStyles } from 'material-ui/styles';
 import classNames from 'classnames';
-import Navbar from './AppBarPages';
-import Sidebar from './DrawerPages';
-import BottomNavigationPages from './BottomNavigationPages';
-import CardDataMaster from './CardDataMaster';
+import Navbar from './AppBarPages/AppBarPages';
+import Sidebar from './DrawerPages/DrawerPages';
+import BottomNavigationPages from './BottomNavigationPages/BottomNavigationPages';
+import CardDataMaster from './CardDataMaster/CardDataMaster';
 import { BottomNavigationAction } from 'material-ui/BottomNavigation';
 import Icon from 'material-ui/Icon';
 import RestoreIcon from 'material-ui-icons/Restore';
