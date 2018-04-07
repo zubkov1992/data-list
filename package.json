@@ -13,7 +13,6 @@
   "homepage": "https://github.com/zubkov1992/data-list#readme",
   "dependencies": {
     "classnames": "^2.2.5",
-    "data-list": "https://github.com/zubkov1992/data-list",
     "material-ui": "^1.0.0-beta.36",
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.2.0",
