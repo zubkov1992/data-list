@@ -2259,9 +2259,10 @@ dashdash@^1.12.0:
 
 "data-list@https://github.com/zubkov1992/data-list":
   version "0.1.0"
-  resolved "https://github.com/zubkov1992/data-list#34620d45cc4cbdc55f0e77df859636f15d8142b7"
+  resolved "https://github.com/zubkov1992/data-list#3be60aca43e1347d4c9473405bfac7de6fa04b52"
   dependencies:
     classnames "^2.2.5"
+    data-list "https://github.com/zubkov1992/data-list"
     material-ui "^1.0.0-beta.36"
     material-ui-icons "^1.0.0-beta.36"
     react "^16.2.0"
