@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List';
@@ -16,6 +17,7 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar
 });
 
+/** Боковая панель. */
 class DrawerPages extends PureComponent {
   render() {
     const { classes, openSidebar } = this.props;
@@ -35,6 +37,11 @@ class DrawerPages extends PureComponent {
       </Drawer>
     );
   }
+}
+
+DrawerPages.propTypes = {
+  classes: PropTypes.object.isRequired,
+  openSidebar: PropTypes.bool
 }
 
 export default withStyles(styles)(DrawerPages);

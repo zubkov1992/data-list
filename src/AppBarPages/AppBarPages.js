@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
@@ -24,26 +25,35 @@ const styles = theme => ({
   }
 });
 
+/** Верхняя навигационная панель. */
 class AppBarPages extends PureComponent {
   render() {
+
     const { classes, onChangeSidebar, logoSrc, auth, onChangeLogin, onChangeLogout } = this.props;
 
     return (
       <AppBar position="fixed" color="default" className={classes.root}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            className={classes.menuButton}
-            onClick={() => {
-              onChangeSidebar();
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div className={classes.logoDiv}>
-            <img src={logoSrc} className={classes.logoImg} alt="Logo" />
-          </div>
-          {auth ? (
+          {/*Кнопка открытия боковой панели если нужна.*/}
+          {onChangeSidebar && (
+            <IconButton
+              color="inherit"
+              className={classes.menuButton}
+              onClick={() => {
+                onChangeSidebar();
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
+          {/*Логотоп если нужен.*/}
+          {logoSrc && (
+            <div className={classes.logoDiv}>
+              <img src={logoSrc} className={classes.logoImg} alt="Logo" />
+            </div>
+          )}
+          {/*Кнопака входа если нужна.*/}
+          {(onChangeLogout && onChangeLogin) && (auth ? (
             <Button
               color="primary"
               onClick={() => {
@@ -61,11 +71,20 @@ class AppBarPages extends PureComponent {
             >
               Войти
             </Button>
-          )}
+          ))}
         </Toolbar>
       </AppBar>
     );
   }
 }
+
+AppBarPages.propTypes = {
+  classes: PropTypes.object.isRequired,
+  onChangeSidebar: PropTypes.func,
+  logoSrc: PropTypes.string,
+  auth: PropTypes.bool,
+  onChangeLogin: PropTypes.func,
+  onChangeLogout: PropTypes.func
+};
 
 export default withStyles(styles)(AppBarPages);

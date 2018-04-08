@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { withStyles } from 'material-ui/styles';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import Card, { CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Collapse from 'material-ui/transitions/Collapse';
 import IconButton from 'material-ui/IconButton';
@@ -64,6 +65,7 @@ const styles = theme => ({
   }
 });
 
+/**Карта с Основными данными */
 class CardDataMaster extends PureComponent {
   render() {
     const {
@@ -83,26 +85,34 @@ class CardDataMaster extends PureComponent {
     return (
       <Card className={classes.root}>
         <div className={classes.details}>
+          {/*Данные с лева в верху.*/}
           <div className={classes.detailsLeft}>
             <CardContent>
+              {/*Верхний Заголовок если нужен.*/}
               {overhead && (
                 <Typography variant="caption" color={overheadColor}>
                   {overhead}
                 </Typography>
               )}
+              {/*Заголовок если нужен.*/}
               {title && <Typography variant="headline">{title}</Typography>}
+              {/*Подзаголовок если нужен.*/}
               {subtitle && (
                 <Typography variant="subheading" color="textSecondary">
                   {subtitle}
                 </Typography>
               )}
             </CardContent>
+            {/*Кнопки действий если нужны.*/}
             {actions && <CardActions className={classes.detailsLeftActions}>{actions}</CardActions>}
           </div>
+          {/*Данные с права с верху.*/}
           <div className={classes.detailsRight}>
+            {/*Обложка если нужна*/}
             {cover && <CardMedia className={classes.detailsRightMedia} image={cover} />}
           </div>
         </div>
+        {/*Кнопка раскрытия основных данных если нужна.*/}
         {contentMain && (
           <CardActions className={classes.actionsBottom}>
             <IconButton
@@ -115,10 +125,13 @@ class CardDataMaster extends PureComponent {
             </IconButton>
           </CardActions>
         )}
+        {/*Данные с низу если нужны.*/}
         {contentMain && (
           <Collapse in={expandMain} timeout="auto">
             <CardContent className={classes.contentMain}>
+              {/*Основные данные*/}
               <Typography className={classes.contentMainLeft}>{contentMain}</Typography>
+              {/*Дополнительные данные если нужны.*/}
               {contentMainAdditional && (
                 <Typography variant="caption" className={classes.contentMainRight}>
                   {contentMainAdditional}
@@ -130,6 +143,21 @@ class CardDataMaster extends PureComponent {
       </Card>
     );
   }
+}
+
+CardDataMaster.propTypes ={
+  classes: PropTypes.object.isRequired,
+  subtitle: PropTypes.string,
+  overhead: PropTypes.string,
+  title: PropTypes.string,
+  cover: PropTypes.string,
+  cover: PropTypes.string,
+  overheadColor: PropTypes.oneOf(['secondary', 'default', 'primary']),
+  contentMain: PropTypes.string,
+  actions: PropTypes.node,
+  expandMain: PropTypes.bool,
+  handleExpandMainClick: PropTypes.func,
+  contentMainAdditional: PropTypes.node
 }
 
 export default withStyles(styles)(CardDataMaster);
