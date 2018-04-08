@@ -29,8 +29,8 @@ storiesOf('CardDataMaster', module).add('card example', () => (
     handleExpandMainClick={action('Контент открыт')}
     contentMainAdditional={
       <div>
-        <Typography variant="Body 1">Жанр: жанр</Typography>
-        <Typography variant="Body 1">Поджанр: поджанр</Typography>
+        <Typography variant="body1">Жанр: жанр</Typography>
+        <Typography variant="body1">Поджанр: поджанр</Typography>
       </div>
     }
   />

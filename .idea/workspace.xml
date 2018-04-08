@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="...">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/AppBarPages/AppBarPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/AppBarPages/AppBarPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBarPages/AppBarPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBarPages/AppBarPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomNavigationPages/BottomNavigationPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomNavigationPages/BottomNavigationPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawerPages/DrawerPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawerPages/DrawerPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="Добавил PropTypes и коментарии.">
+      <change beforePath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DrawerPages.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DrawerPages/DrawerPages.js">
+      <file leaf-file-name="CardDataMaster.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="481">
+              <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -81,6 +70,7 @@
       <find>babel-preset</find>
       <find>babelrc</find>
       <find>PropTypes</find>
+      <find>variant</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -102,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/masterDataCard.stories.js" />
         <option value="$PROJECT_DIR$/src/components/CardMasterData.js" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/pages/Navbar.js" />
@@ -153,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/BottomNavigationPages/BottomNavigationPages.js" />
         <option value="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" />
         <option value="$PROJECT_DIR$/src/DrawerPages/DrawerPages.js" />
+        <option value="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js" />
       </list>
     </option>
   </component>
@@ -212,12 +202,13 @@
             <path>
               <item name="data-list" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-list" type="462c0819:PsiDirectoryNode" />
-              <item name=".storybook" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="data-list" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-list" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="CardDataMaster" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="data-list" type="b2602c69:ProjectViewProjectNode" />
@@ -354,7 +345,7 @@
       <workItem from="1522994924741" duration="1020000" />
       <workItem from="1522998249220" duration="15350000" />
       <workItem from="1523098000958" duration="240000" />
-      <workItem from="1523164156509" duration="10201000" />
+      <workItem from="1523164156509" duration="10887000" />
     </task>
     <task id="LOCAL-00001" summary="Дополнение package.json">
       <created>1522946212603</created>
@@ -468,23 +459,30 @@
       <option name="project" value="LOCAL" />
       <updated>1523119280642</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Добавил PropTypes и коментарии.">
+      <created>1523177972455</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1523177972455</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145746000" />
+    <option name="totallyTimeSpent" value="146432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1922" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6791315" visible="true" weight="0.16510417" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67951316" visible="true" weight="0.16510417" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50104165" side_tool="true" weight="0.20791075" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
-      <window_info id="npm" order="2" sideWeight="0.32086852" side_tool="true" visible="true" weight="0.16510417" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921012" visible="true" weight="0.1592292" />
+      <window_info id="npm" order="2" sideWeight="0.3204868" side_tool="true" visible="true" weight="0.16510417" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921012" weight="0.1592292" />
       <window_info id="Structure" order="1" sideWeight="0.40944883" side_tool="true" weight="0.16745655" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49895832" weight="0.20689656" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -566,7 +564,8 @@
     <MESSAGE value="npmignore" />
     <MESSAGE value="Окончательные преобразования." />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Добавил PropTypes и коментарии." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил PropTypes и коментарии." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -802,13 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.storybook/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBarPages/AppBarPages.stories.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -865,10 +857,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawerPages/DrawerPages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.storybook/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="25" />
+        <state relative-caret-position="576">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -877,18 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="116" column="24" lean-forward="true" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DrawerPages/DrawerPages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="481">
+          <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
