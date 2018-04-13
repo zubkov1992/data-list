@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LoadPages/LoadPages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoadPages/LoadPages.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoadPages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBarPages/AppBarPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBarPages/AppBarPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomNavigationPages/BottomNavigationPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomNavigationPages/BottomNavigationPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawerPages/DrawerPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawerPages/DrawerPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawerPages/DrawerPages.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawerPages/DrawerPages.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ErrorPages/ErrorPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ErrorPages/ErrorPages.js" afterDir="false" />
-    </list>
+    <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -363,7 +352,7 @@
       <workItem from="1523269221811" duration="81000" />
       <workItem from="1523269428682" duration="48000" />
       <workItem from="1523628396270" duration="1572000" />
-      <workItem from="1523630015131" duration="705000" />
+      <workItem from="1523630015131" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="Дополнение package.json">
       <created>1522946212603</created>
@@ -519,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523269446128</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Новый компонент.">
+      <created>1523630741014</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1523630741014</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151215000" />
+    <option name="totallyTimeSpent" value="151370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1061" extended-state="6" />
@@ -829,6 +825,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -843,6 +842,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
