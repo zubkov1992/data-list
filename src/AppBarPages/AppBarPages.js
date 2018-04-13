@@ -27,8 +27,16 @@ const styles = theme => ({
 
 /** Верхняя навигационная панель. */
 class AppBarPages extends PureComponent {
-  render() {
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    onChangeSidebar: PropTypes.func,
+    logoSrc: PropTypes.string,
+    auth: PropTypes.bool,
+    onChangeLogin: PropTypes.func,
+    onChangeLogout: PropTypes.func
+  };
 
+  render() {
     const { classes, onChangeSidebar, logoSrc, auth, onChangeLogin, onChangeLogout } = this.props;
 
     return (
@@ -53,38 +61,31 @@ class AppBarPages extends PureComponent {
             </div>
           )}
           {/*Кнопака входа если нужна.*/}
-          {(onChangeLogout && onChangeLogin) && (auth ? (
-            <Button
-              color="primary"
-              onClick={() => {
-                onChangeLogout();
-              }}
-            >
-              Выйти
-            </Button>
-          ) : (
-            <Button
-              color="inherit"
-              onClick={() => {
-                onChangeLogin();
-              }}
-            >
-              Войти
-            </Button>
-          ))}
+          {onChangeLogout &&
+            onChangeLogin &&
+            (auth ? (
+              <Button
+                color="primary"
+                onClick={() => {
+                  onChangeLogout();
+                }}
+              >
+                Выйти
+              </Button>
+            ) : (
+              <Button
+                color="inherit"
+                onClick={() => {
+                  onChangeLogin();
+                }}
+              >
+                Войти
+              </Button>
+            ))}
         </Toolbar>
       </AppBar>
     );
   }
 }
-
-AppBarPages.propTypes = {
-  classes: PropTypes.object.isRequired,
-  onChangeSidebar: PropTypes.func,
-  logoSrc: PropTypes.string,
-  auth: PropTypes.bool,
-  onChangeLogin: PropTypes.func,
-  onChangeLogout: PropTypes.func
-};
 
 export default withStyles(styles)(AppBarPages);

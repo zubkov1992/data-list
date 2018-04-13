@@ -18,6 +18,13 @@ const styles = theme => ({
 
 /**Нижняя панель навигации. */
 class BottomNavigationPages extends React.Component {
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    handleChange: PropTypes.func,
+    valueChanged: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    children: PropTypes.node
+  };
+
   render() {
     const { classes, handleChange, valueChanged, children } = this.props;
 
@@ -32,12 +39,5 @@ class BottomNavigationPages extends React.Component {
     );
   }
 }
-
-BottomNavigationPages.propTypes = {
-  classes: PropTypes.object.isRequired,
-  handleChange: PropTypes.func,
-  valueChanged: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  children: PropTypes.node
-};
 
 export default withStyles(styles)(BottomNavigationPages);

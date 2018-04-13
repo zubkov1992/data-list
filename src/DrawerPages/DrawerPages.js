@@ -19,13 +19,18 @@ const styles = theme => ({
 
 /** Боковая панель. */
 class DrawerPages extends PureComponent {
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    openDrawer: PropTypes.bool
+  };
+
   render() {
-    const { classes, openSidebar } = this.props;
+    const { classes, openDrawer } = this.props;
 
     return (
       <Drawer
         variant="persistent"
-        open={openSidebar}
+        open={openDrawer}
         classes={{
           paper: classes.root
         }}
@@ -37,11 +42,6 @@ class DrawerPages extends PureComponent {
       </Drawer>
     );
   }
-}
-
-DrawerPages.propTypes = {
-  classes: PropTypes.object.isRequired,
-  openSidebar: PropTypes.bool
 }
 
 export default withStyles(styles)(DrawerPages);

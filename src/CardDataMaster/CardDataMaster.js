@@ -67,6 +67,21 @@ const styles = theme => ({
 
 /**Карта с Основными данными */
 class CardDataMaster extends PureComponent {
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    subtitle: PropTypes.string,
+    overhead: PropTypes.string,
+    title: PropTypes.string,
+    cover: PropTypes.string,
+    cover: PropTypes.string,
+    overheadColor: PropTypes.oneOf(['secondary', 'default', 'primary']),
+    contentMain: PropTypes.string,
+    actions: PropTypes.node,
+    expandMain: PropTypes.bool,
+    handleExpandMainClick: PropTypes.func,
+    contentMainAdditional: PropTypes.node
+  };
+
   render() {
     const {
       classes,
@@ -143,21 +158,6 @@ class CardDataMaster extends PureComponent {
       </Card>
     );
   }
-}
-
-CardDataMaster.propTypes ={
-  classes: PropTypes.object.isRequired,
-  subtitle: PropTypes.string,
-  overhead: PropTypes.string,
-  title: PropTypes.string,
-  cover: PropTypes.string,
-  cover: PropTypes.string,
-  overheadColor: PropTypes.oneOf(['secondary', 'default', 'primary']),
-  contentMain: PropTypes.string,
-  actions: PropTypes.node,
-  expandMain: PropTypes.bool,
-  handleExpandMainClick: PropTypes.func,
-  contentMainAdditional: PropTypes.node
 }
 
 export default withStyles(styles)(CardDataMaster);

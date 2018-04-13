@@ -1,7 +1,6 @@
-import React from 'react';
-import Typography from 'material-ui/Typography';
+import React, { Component } from 'react';
+import { CircularProgress } from 'material-ui/Progress';
 import { withStyles } from 'material-ui/styles';
-import PropTypes from 'prop-types';
 
 const styles = theme => ({
   root: {
@@ -23,24 +22,18 @@ const styles = theme => ({
 });
 
 /**Нижняя панель навигации. */
-class ErrorPages extends React.Component {
-  static propTypes = {
-    message: PropTypes.string.isRequired
-  };
-
+class LoadPages extends Component {
   render() {
-    const { classes, message } = this.props;
+    const { classes } = this.props;
 
     return (
       <div className={classes.root}>
         <div className={classes.message}>
-          <Typography variant="headline" color="error" align="center">
-            {message}
-          </Typography>
+          <CircularProgress className={classes.progress} size={230} thickness={4} />
         </div>
       </div>
     );
   }
 }
 
-export default withStyles(styles)(ErrorPages);
+export default withStyles(styles)(LoadPages);
