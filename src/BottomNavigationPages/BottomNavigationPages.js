@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
@@ -17,7 +17,7 @@ const styles = theme => ({
 });
 
 /**Нижняя панель навигации. */
-class BottomNavigationPages extends React.Component {
+class BottomNavigationPages extends Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
     handleChange: PropTypes.func,

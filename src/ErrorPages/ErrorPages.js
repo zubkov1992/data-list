@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
 import PropTypes from 'prop-types';
@@ -23,7 +23,7 @@ const styles = theme => ({
 });
 
 /**Нижняя панель навигации. */
-class ErrorPages extends React.Component {
+class ErrorPages extends Component {
   static propTypes = {
     message: PropTypes.string.isRequired
   };
