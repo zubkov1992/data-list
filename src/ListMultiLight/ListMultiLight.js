@@ -32,7 +32,11 @@ class ListMultiLight extends PureComponent {
     className: PropTypes.string,
     dense: PropTypes.bool,
     disablePadding: PropTypes.bool,
-    subheader: PropTypes.node,
+    subheader: PropTypes.node
+  };
+
+  static childContextTypes = {
+    dense: PropTypes.bool
   };
 
   getChildContext() {

@@ -43,6 +43,10 @@ class ListItemMultiLight extends PureComponent {
     divider: PropTypes.bool
   };
 
+  static childContextTypes = {
+    dense: PropTypes.bool
+  };
+
   render() {
     const { classes, children, className: classNameProp, dense, divider } = this.props;
     const isDense = dense || this.context.dense || false;

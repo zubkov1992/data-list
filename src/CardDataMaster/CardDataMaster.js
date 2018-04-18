@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { withStyles } from 'material-ui/styles';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Card, { CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Collapse from 'material-ui/transitions/Collapse';
@@ -133,7 +133,7 @@ class CardDataMaster extends PureComponent {
         {contentMain && (
           <CardActions className={classes.actionsBottom}>
             <IconButton
-              className={classnames(classes.expand, {
+              className={classNames(classes.expand, {
                 [classes.expandOpen]: expandMain
               })}
               onClick={handleExpandMainClick}

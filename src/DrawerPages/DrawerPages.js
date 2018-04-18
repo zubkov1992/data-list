@@ -4,7 +4,6 @@ import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import classNames from 'classnames';
 
 const drawerWidth = 240;
 
@@ -33,12 +32,10 @@ class DrawerPages extends PureComponent {
       <Drawer
         variant="persistent"
         open={openDrawer}
-        classes={classNames(
-          {
-            paper: classes.root
-          },
-          classNameProp
-        )}
+        classes={{
+          paper: classes.root
+        }}
+        className={classNameProp}
       >
         <div className={classes.toolbar} />
         <List>Fjhkjhkjh</List>
