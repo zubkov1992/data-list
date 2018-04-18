@@ -66,7 +66,20 @@ class ListMultiLight extends PureComponent {
   };
 
   static contextTypes = {
-    dense: PropTypes.bool
+    dense: PropTypes.bool,
+    variant: PropTypes.oneOf([
+      'display4',
+      'display3',
+      'display2',
+      'display1',
+      'headline',
+      'title',
+      'subheading',
+      'body2',
+      'body1',
+      'caption'
+    ]),
+    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
   };
 
   getChildContext() {
