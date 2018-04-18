@@ -7,7 +7,12 @@ import ListTextMultiLight from './ListTextMultiLight';
 storiesOf('ListMultiLight', module).add('ListMultiLight example', () => (
   <ListMultiLight>
     <ListItemMultiLight>
-      <ListTextMultiLight component="div" color="textSecondary" variant="caption" text="Subtext 1" />
+      <ListTextMultiLight
+        component="div"
+        color="textSecondary"
+        variant="caption"
+        text="Subtext 1"
+      />
       <ListTextMultiLight component="div" color="textSecondary" variant="body2" text="Text" />
     </ListItemMultiLight>
     <ListItemMultiLight>

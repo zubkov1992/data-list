@@ -8,12 +8,12 @@ const styles = theme => ({
     listStyle: 'none'
   },
   padding: {
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit
-  },
-  dense: {
     paddingTop: theme.spacing.unit / 2,
     paddingBottom: theme.spacing.unit / 2
+  },
+  dense: {
+    paddingTop: theme.spacing.unit / 3,
+    paddingBottom: theme.spacing.unit / 3
   },
   subheader: {
     paddingTop: 0
@@ -32,11 +32,37 @@ class ListMultiLight extends PureComponent {
     className: PropTypes.string,
     dense: PropTypes.bool,
     disablePadding: PropTypes.bool,
-    subheader: PropTypes.node
+    subheader: PropTypes.node,
+    variant: PropTypes.oneOf([
+      'display4',
+      'display3',
+      'display2',
+      'display1',
+      'headline',
+      'title',
+      'subheading',
+      'body2',
+      'body1',
+      'caption'
+    ]),
+    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
   };
 
   static childContextTypes = {
-    dense: PropTypes.bool
+    dense: PropTypes.bool,
+    variant: PropTypes.oneOf([
+      'display4',
+      'display3',
+      'display2',
+      'display1',
+      'headline',
+      'title',
+      'subheading',
+      'body2',
+      'body1',
+      'caption'
+    ]),
+    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
   };
 
   static contextTypes = {
@@ -45,7 +71,9 @@ class ListMultiLight extends PureComponent {
 
   getChildContext() {
     return {
-      dense: this.props.dense || this.context.dense || false
+      dense: this.props.dense || this.context.dense || false,
+      color: this.props.color || this.context.color || 'default',
+      variant: this.props.variant || this.context.variant || 'body2'
     };
   }
 

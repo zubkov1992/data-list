@@ -10,12 +10,12 @@ const styles = theme => ({
     textAlign: 'left'
   },
   default: {
-    paddingTop: 12,
-    paddingBottom: 12
-  },
-  dense: {
     paddingTop: theme.spacing.unit,
     paddingBottom: theme.spacing.unit
+  },
+  dense: {
+    paddingTop: theme.spacing.unit / 4,
+    paddingBottom: theme.spacing.unit / 4
   },
   divider: {
     borderBottom: `1px solid ${theme.palette.divider}`,
@@ -25,12 +25,6 @@ const styles = theme => ({
 
 /**Нижняя панель навигации. */
 class ListItemMultiLight extends PureComponent {
-  getChildContext() {
-    return {
-      dense: this.props.dense || this.context.dense || false
-    };
-  }
-
   static defaultProps = {
     dense: false,
     divider: false
@@ -40,16 +34,50 @@ class ListItemMultiLight extends PureComponent {
     children: PropTypes.node,
     className: PropTypes.string,
     dense: PropTypes.bool,
-    divider: PropTypes.bool
+    divider: PropTypes.bool,
+    variant: PropTypes.oneOf([
+      'display4',
+      'display3',
+      'display2',
+      'display1',
+      'headline',
+      'title',
+      'subheading',
+      'body2',
+      'body1',
+      'caption'
+    ]),
+    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
   };
 
   static childContextTypes = {
-    dense: PropTypes.bool
+    dense: PropTypes.bool,
+    variant: PropTypes.oneOf([
+      'display4',
+      'display3',
+      'display2',
+      'display1',
+      'headline',
+      'title',
+      'subheading',
+      'body2',
+      'body1',
+      'caption'
+    ]),
+    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
   };
 
   static contextTypes = {
     dense: PropTypes.bool
   };
+
+  getChildContext() {
+    return {
+      dense: this.props.dense || this.context.dense || false,
+      color: this.props.color || this.context.color || 'default',
+      variant: this.props.variant || this.context.variant || 'body2'
+    };
+  }
 
   render() {
     const { classes, children, className: classNameProp, dense, divider } = this.props;

@@ -61,7 +61,24 @@ class ListTextMultiLight extends PureComponent {
   };
 
   static defaultProps = {
-    variant: 'body2'
+    variant: 'body2',
+    color: 'default'
+  };
+
+  static contextTypes = {
+    variant: PropTypes.oneOf([
+      'display4',
+      'display3',
+      'display2',
+      'display1',
+      'headline',
+      'title',
+      'subheading',
+      'body2',
+      'body1',
+      'caption'
+    ]),
+    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
   };
 
   render() {
@@ -74,13 +91,17 @@ class ListTextMultiLight extends PureComponent {
       className: classNameProp
     } = this.props;
     const Component = componentProp || 'span';
+    const {variantContext, colorContext} = this.context
+    const variantProps = variantContext || variant;
+    const colorProps = colorContext || color
+
 
     return (
       <Component
         className={classNames(
-          classes[variant],
+          classes[variantProps],
           {
-            [classes[`color${capitalize(color)}`]]: color !== 'default'
+            [classes[`color${capitalize(colorProps)}`]]: colorProps !== 'default'
           },
           classNameProp
         )}
