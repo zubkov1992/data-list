@@ -41,7 +41,7 @@ class ListMultiLight extends PureComponent {
 
   getChildContext() {
     return {
-      dense: this.props.dense
+      dense: this.props.dense || this.context.dense || false
     };
   }
 
