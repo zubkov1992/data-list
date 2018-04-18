@@ -39,8 +39,11 @@ class ListMultiLight extends PureComponent {
     dense: PropTypes.bool
   };
 
+  static contextTypes = {
+    dense: PropTypes.bool
+  };
+
   getChildContext() {
-    console.log('test')
     return {
       dense: this.props.dense || this.context.dense || false
     };
@@ -55,8 +58,6 @@ class ListMultiLight extends PureComponent {
       disablePadding,
       subheader
     } = this.props;
-
-    console.log(`2 ${this.context}`)
 
     return (
       <ul
