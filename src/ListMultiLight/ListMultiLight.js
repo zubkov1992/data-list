@@ -55,6 +55,8 @@ class ListMultiLight extends PureComponent {
       subheader
     } = this.props;
 
+    console.log(`2 ${this.context.dense}`)
+
     return (
       <ul
         className={classNames(
