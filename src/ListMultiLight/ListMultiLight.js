@@ -40,6 +40,7 @@ class ListMultiLight extends PureComponent {
   };
 
   getChildContext() {
+    console.log('test')
     return {
       dense: this.props.dense || this.context.dense || false
     };
@@ -55,7 +56,7 @@ class ListMultiLight extends PureComponent {
       subheader
     } = this.props;
 
-    console.log(`2 ${this.context.dense}`)
+    console.log(`2 ${this.context}`)
 
     return (
       <ul

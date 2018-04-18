@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="">
+    <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ListMultiLight/ListItemMultiLight.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ListMultiLight/ListItemMultiLight.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ListMultiLight/ListMultiLight.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ListMultiLight/ListMultiLight.js" afterDir="false" />
@@ -31,14 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ListItemMultiLight.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ListMultiLight/ListItemMultiLight.js">
+      <file leaf-file-name="ListMultiLight.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="618">
+              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -81,6 +78,7 @@
       <find>classNames</find>
       <find>classnames</find>
       <find>classes</find>
+      <find>dense</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -151,8 +149,8 @@
         <option value="$PROJECT_DIR$/src/AppBarPages/AppBarPages.js" />
         <option value="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" />
         <option value="$PROJECT_DIR$/src/DrawerPages/DrawerPages.js" />
-        <option value="$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.js" />
         <option value="$PROJECT_DIR$/src/ListMultiLight/ListItemMultiLight.js" />
+        <option value="$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.js" />
       </list>
     </option>
   </component>
@@ -205,6 +203,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,7 +237,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +377,8 @@
       <workItem from="1524016998606" duration="87000" />
       <workItem from="1524019432293" duration="874000" />
       <workItem from="1524021144597" duration="119000" />
-      <workItem from="1524021666076" duration="921000" />
+      <workItem from="1524021666076" duration="970000" />
+      <workItem from="1524031359115" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="Дополнение package.json">
       <created>1522946212603</created>
@@ -598,23 +597,29 @@
       <option name="project" value="LOCAL" />
       <updated>1524021226540</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Новый компонент.">
+      <created>1524031048320</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1524031048320</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166931000" />
+    <option name="totallyTimeSpent" value="167286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-18" width="1924" height="1081" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.66239816" visible="true" weight="0.2125" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.661234" visible="true" weight="0.2125" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50104165" side_tool="true" weight="0.20788178" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
-      <window_info id="npm" order="2" sideWeight="0.33760187" side_tool="true" visible="true" weight="0.2125" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49921012" visible="true" weight="0.15369458" />
+      <window_info active="true" id="npm" order="2" sideWeight="0.338766" side_tool="true" visible="true" weight="0.2125" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921012" visible="true" weight="0.15369458" />
       <window_info id="Structure" order="1" sideWeight="0.40944883" side_tool="true" weight="0.16745655" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49895832" weight="0.20689656" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -637,23 +642,23 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info id="npm" order="2" sideWeight="0.26977688" side_tool="true" weight="0.24947916" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.17685185" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7302231" visible="true" weight="0.25416666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296146" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3286004" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.21481481" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3296146" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3286004" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1021,20 +1026,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ListMultiLight/ListItemMultiLight.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        <state relative-caret-position="546">
+          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
         </state>
       </provider>
     </entry>
