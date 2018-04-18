@@ -34,48 +34,20 @@ class ListItemMultiLight extends PureComponent {
     children: PropTypes.node,
     className: PropTypes.string,
     dense: PropTypes.bool,
-    divider: PropTypes.bool,
-    variant: PropTypes.oneOf([
-      'display4',
-      'display3',
-      'display2',
-      'display1',
-      'headline',
-      'title',
-      'subheading',
-      'body2',
-      'body1',
-      'caption'
-    ]),
-    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
+    divider: PropTypes.bool
   };
 
   static childContextTypes = {
-    dense: PropTypes.bool,
-    variant: PropTypes.oneOf([
-      'display4',
-      'display3',
-      'display2',
-      'display1',
-      'headline',
-      'title',
-      'subheading',
-      'body2',
-      'body1',
-      'caption'
-    ]),
-    color: PropTypes.oneOf(['inherit', 'primary', 'textSecondary', 'secondary', 'error', 'default'])
+    dense: PropTypes.bool
   };
 
   static contextTypes = {
-    dense: PropTypes.bool
+    dense: PropTypes.bool,
   };
 
   getChildContext() {
     return {
-      dense: this.props.dense || this.context.dense || false,
-      color: this.props.color || this.context.color || 'default',
-      variant: this.props.variant || this.context.variant || 'body2'
+      dense: this.props.dense || this.context.dense || false
     };
   }
 
