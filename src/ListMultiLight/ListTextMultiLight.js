@@ -56,7 +56,8 @@ class ListTextMultiLight extends PureComponent {
       'error',
       'default'
     ]),
-    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    className: PropTypes.string
   };
 
   static defaultProps = {
@@ -64,14 +65,25 @@ class ListTextMultiLight extends PureComponent {
   };
 
   render() {
-    const { classes, text, variant, color, component: componentProp } = this.props;
+    const {
+      classes,
+      text,
+      variant,
+      color,
+      component: componentProp,
+      className: classNameProp
+    } = this.props;
     const Component = componentProp || 'span';
 
     return (
       <Component
-        className={classNames(classes[variant], {
-          [classes[`color${capitalize(color)}`]]: color !== 'default'
-        })}
+        className={classNames(
+          classes[variant],
+          {
+            [classes[`color${capitalize(color)}`]]: color !== 'default'
+          },
+          classNameProp
+        )}
       >
         {text}
       </Component>

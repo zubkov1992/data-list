@@ -6,6 +6,7 @@ import Toolbar from 'material-ui/Toolbar';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import classNames from 'classnames';
 
 const styles = theme => ({
   root: {
@@ -33,14 +34,15 @@ class AppBarPages extends PureComponent {
     logoSrc: PropTypes.string,
     auth: PropTypes.bool,
     onChangeLogin: PropTypes.func,
-    onChangeLogout: PropTypes.func
+    onChangeLogout: PropTypes.func,
+    className: PropTypes.string
   };
 
   render() {
-    const { classes, onChangeSidebar, logoSrc, auth, onChangeLogin, onChangeLogout } = this.props;
+    const { classes, onChangeSidebar, logoSrc, auth, onChangeLogin, onChangeLogout, className: classNameProp } = this.props;
 
     return (
-      <AppBar position="fixed" color="default" className={classes.root}>
+      <AppBar position="fixed" color="default" className={classNames(classes.root, classNameProp)}>
         <Toolbar>
           {/*Кнопка открытия боковой панели если нужна.*/}
           {onChangeSidebar && (

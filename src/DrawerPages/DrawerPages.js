@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+import classNames from 'classnames';
 
 const drawerWidth = 240;
 
@@ -21,19 +22,23 @@ const styles = theme => ({
 class DrawerPages extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    openDrawer: PropTypes.bool
+    openDrawer: PropTypes.bool,
+    className: PropTypes.string
   };
 
   render() {
-    const { classes, openDrawer } = this.props;
+    const { classes, openDrawer, className: classNameProp } = this.props;
 
     return (
       <Drawer
         variant="persistent"
         open={openDrawer}
-        classes={{
-          paper: classes.root
-        }}
+        classes={classNames(
+          {
+            paper: classes.root
+          },
+          classNameProp
+        )}
       >
         <div className={classes.toolbar} />
         <List>Fjhkjhkjh</List>

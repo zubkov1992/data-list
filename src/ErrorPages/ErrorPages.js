@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const styles = theme => ({
   root: {
@@ -25,14 +26,15 @@ const styles = theme => ({
 /**Нижняя панель навигации. */
 class ErrorPages extends Component {
   static propTypes = {
-    message: PropTypes.string.isRequired
+    message: PropTypes.string.isRequired,
+    className: PropTypes.string
   };
 
   render() {
-    const { classes, message } = this.props;
+    const { classes, message, className: classNameProp } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={classNames(classes.root, classNameProp)}>
         <div className={classes.message}>
           <Typography variant="headline" color="error" align="center">
             {message}

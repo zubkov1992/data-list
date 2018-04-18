@@ -79,7 +79,8 @@ class CardDataMaster extends PureComponent {
     actions: PropTypes.node,
     expandMain: PropTypes.bool,
     handleExpandMainClick: PropTypes.func,
-    contentMainAdditional: PropTypes.node
+    contentMainAdditional: PropTypes.node,
+    className: PropTypes.string
   };
 
   render() {
@@ -94,11 +95,12 @@ class CardDataMaster extends PureComponent {
       actions,
       expandMain,
       handleExpandMainClick,
-      contentMainAdditional
+      contentMainAdditional,
+      className: classNameProp
     } = this.props;
 
     return (
-      <Card className={classes.root}>
+      <Card className={classNames(classes.root, classNameProp)}>
         <div className={classes.details}>
           {/*Данные с лева в верху.*/}
           <div className={classes.detailsLeft}>

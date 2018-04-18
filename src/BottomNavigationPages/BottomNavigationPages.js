@@ -22,17 +22,18 @@ class BottomNavigationPages extends Component {
     classes: PropTypes.object.isRequired,
     handleChange: PropTypes.func,
     valueChanged: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    children: PropTypes.node
+    children: PropTypes.node,
+    className: PropTypes.string
   };
 
   render() {
-    const { classes, handleChange, valueChanged, children } = this.props;
+    const { classes, handleChange, valueChanged, children, className: classNameProp } = this.props;
 
     return (
       <BottomNavigation
         value={valueChanged}
         onChange={handleChange}
-        className={classNames(classes.root, classes.toolbar)}
+        className={classNames(classes.root, classes.toolbar, classNameProp)}
       >
         {children}
       </BottomNavigation>

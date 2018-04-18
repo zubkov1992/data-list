@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { CircularProgress } from 'material-ui/Progress';
 import { withStyles } from 'material-ui/styles';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const styles = theme => ({
   root: {
@@ -23,11 +25,16 @@ const styles = theme => ({
 
 /**Нижняя панель навигации. */
 class LoadPages extends Component {
+  static propTypes = {
+    className: PropTypes.string
+  };
+
+
   render() {
-    const { classes } = this.props;
+    const { classes, className: classNameProp } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={classNames(classes.root, classNameProp)}>
         <div className={classes.message}>
           <CircularProgress className={classes.progress} size={230} thickness={4} />
         </div>

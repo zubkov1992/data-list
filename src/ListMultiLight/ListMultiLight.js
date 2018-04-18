@@ -1,23 +1,72 @@
 import React, { PureComponent } from 'react';
 import { withStyles } from 'material-ui/styles';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const styles = theme => ({
   root: {
     listStyle: 'none'
+  },
+  padding: {
+    paddingTop: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit
+  },
+  dense: {
+    paddingTop: theme.spacing.unit / 2,
+    paddingBottom: theme.spacing.unit / 2
+  },
+  subheader: {
+    paddingTop: 0
   }
 });
 
 /**Нижняя панель навигации. */
 class ListMultiLight extends PureComponent {
-  static propTypes = {
-    children: PropTypes.node
+  static defaultProps = {
+    dense: false,
+    disablePadding: false
   };
 
-  render() {
-    const { classes, children } = this.props;
+  static propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    dense: PropTypes.bool,
+    disablePadding: PropTypes.bool,
+    subheader: PropTypes.node,
+  };
 
-    return <ul className={classes.root}>{children}</ul>;
+  getChildContext() {
+    return {
+      dense: this.props.dense
+    };
+  }
+
+  render() {
+    const {
+      classes,
+      children,
+      className: classNameProp,
+      dense,
+      disablePadding,
+      subheader
+    } = this.props;
+
+    return (
+      <ul
+        className={classNames(
+          classes.root,
+          {
+            [classes.dense]: dense && !disablePadding,
+            [classes.padding]: !disablePadding,
+            [classes.subheader]: subheader
+          },
+          classNameProp
+        )}
+      >
+        {subheader}
+        {children}
+      </ul>
+    );
   }
 }
 
