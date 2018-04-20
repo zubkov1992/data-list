@@ -60,11 +60,6 @@ class ListTextMultiLight extends PureComponent {
     className: PropTypes.string
   };
 
-  static defaultProps = {
-    variant: 'body2',
-    color: 'default'
-  };
-
   static contextTypes = {
     variant: PropTypes.oneOf([
       'display4',
