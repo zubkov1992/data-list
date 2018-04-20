@@ -89,11 +89,11 @@ class ListTextMultiLight extends PureComponent {
       color,
       component: componentProp,
       className: classNameProp
-    } = this.props;
+    } = this.props
     const Component = componentProp || 'span';
     const {variant: variantContext, color: colorContext} = this.context
-    const variantProps = variantContext || variant;
-    const colorProps = colorContext || color
+    const variantProps = variant || variantContext;
+    const colorProps = color || colorContext
 
     return (
       <Component
