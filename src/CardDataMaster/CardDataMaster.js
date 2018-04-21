@@ -69,12 +69,15 @@ const styles = theme => ({
 class CardDataMaster extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    subtitle: PropTypes.string,
-    overhead: PropTypes.string,
+    headline: PropTypes.string,
     title: PropTypes.string,
+    subheading: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.node
+    ]),
     cover: PropTypes.string,
-    cover: PropTypes.string,
-    overheadColor: PropTypes.oneOf(['secondary', 'default', 'primary']),
+    caption: PropTypes.string,
+    captionColor: PropTypes.oneOf(['secondary', 'default', 'primary']),
     contentMain: PropTypes.string,
     actions: PropTypes.node,
     expandMain: PropTypes.bool,
@@ -86,11 +89,12 @@ class CardDataMaster extends PureComponent {
   render() {
     const {
       classes,
-      subtitle,
-      overhead,
       title,
+      subheading,
+      caption,
+      headline,
       cover,
-      overheadColor,
+      captionColor,
       contentMain,
       actions,
       expandMain,
@@ -106,17 +110,23 @@ class CardDataMaster extends PureComponent {
           <div className={classes.detailsLeft}>
             <CardContent>
               {/*Верхний Заголовок если нужен.*/}
-              {overhead && (
-                <Typography variant="caption" color={overheadColor}>
-                  {overhead}
+              {caption && (
+                <Typography variant="caption" color={captionColor}>
+                  {caption}
                 </Typography>
               )}
               {/*Заголовок если нужен.*/}
-              {title && <Typography variant="headline">{title}</Typography>}
+              {headline && <Typography variant="headline">{headline}</Typography>}
               {/*Подзаголовок если нужен.*/}
-              {subtitle && (
+              {title && (
+                <Typography variant="title">
+                  {title}
+                </Typography>
+              )}
+              {/*Подзаголовок если нужен.*/}
+              {subheading && (
                 <Typography variant="subheading" color="textSecondary">
-                  {subtitle}
+                  {subheading}
                 </Typography>
               )}
             </CardContent>
