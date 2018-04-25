@@ -7,6 +7,8 @@ import Collapse from 'material-ui/transitions/Collapse';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+import Badge from 'material-ui/Badge';
+import teal from 'material-ui/colors/teal';
 
 const styles = theme => ({
   root: {
@@ -14,6 +16,18 @@ const styles = theme => ({
     marginBottom: 10,
     zIndex: theme.zIndex.drawer - 1,
     fontFamily: 'roboto'
+  },
+  badge: {
+    width: 72,
+    margin: theme.spacing.unit * 0.6,
+    padding: `0 ${theme.spacing.unit * 0.6}px`,
+    borderRadius: 7,
+    left: -12,
+    zIndex: theme.zIndex.drawer + 2
+  },
+  badgeColorTeal: {
+    backgroundColor: teal[500],
+    color: theme.palette.primary.contrastText
   },
   details: {
     display: 'flex'
@@ -71,13 +85,11 @@ class CardDataMaster extends PureComponent {
     classes: PropTypes.object.isRequired,
     headline: PropTypes.string,
     title: PropTypes.string,
-    subheading: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.node
-    ]),
+    subheading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     cover: PropTypes.string,
     caption: PropTypes.string,
-    captionColor: PropTypes.oneOf(['secondary', 'default', 'primary']),
+    bradge: PropTypes.string,
+    badgeColor: PropTypes.oneOf(['secondary', 'teal', 'primary']),
     contentMain: PropTypes.string,
     actions: PropTypes.node,
     expandMain: PropTypes.bool,
@@ -94,7 +106,8 @@ class CardDataMaster extends PureComponent {
       caption,
       headline,
       cover,
-      captionColor,
+      badgeColor,
+      badge,
       contentMain,
       actions,
       expandMain,
@@ -104,70 +117,66 @@ class CardDataMaster extends PureComponent {
     } = this.props;
 
     return (
-      <Card className={classNames(classes.root, classNameProp)}>
-        <div className={classes.details}>
-          {/*Данные с лева в верху.*/}
-          <div className={classes.detailsLeft}>
-            <CardContent>
-              {/*Верхний Заголовок если нужен.*/}
-              {caption && (
-                <Typography variant="caption" color={captionColor}>
-                  {caption}
-                </Typography>
+      <Badge classes={{ badge: classes.badge, colorTeal: classes.badgeColorTeal }} badgeContent={badge} color={badgeColor}>
+        <Card className={classNames(classes.root, classNameProp)}>
+          <div className={classes.details}>
+            {/*Данные с лева в верху.*/}
+            <div className={classes.detailsLeft}>
+              <CardContent>
+                {/*Верхний Заголовок если нужен.*/}
+                {caption && <Typography variant="caption">{caption}</Typography>}
+                {/*Заголовок если нужен.*/}
+                {headline && <Typography variant="headline">{headline}</Typography>}
+                {/*Подзаголовок если нужен.*/}
+                {title && <Typography variant="title">{title}</Typography>}
+                {/*Подзаголовок если нужен.*/}
+                {subheading && (
+                  <Typography variant="subheading" color="textSecondary">
+                    {subheading}
+                  </Typography>
+                )}
+              </CardContent>
+              {/*Кнопки действий если нужны.*/}
+              {actions && (
+                <CardActions className={classes.detailsLeftActions}>{actions}</CardActions>
               )}
-              {/*Заголовок если нужен.*/}
-              {headline && <Typography variant="headline">{headline}</Typography>}
-              {/*Подзаголовок если нужен.*/}
-              {title && (
-                <Typography variant="title">
-                  {title}
-                </Typography>
-              )}
-              {/*Подзаголовок если нужен.*/}
-              {subheading && (
-                <Typography variant="subheading" color="textSecondary">
-                  {subheading}
-                </Typography>
-              )}
-            </CardContent>
-            {/*Кнопки действий если нужны.*/}
-            {actions && <CardActions className={classes.detailsLeftActions}>{actions}</CardActions>}
+            </div>
+            {/*Данные с права с верху.*/}
+            <div className={classes.detailsRight}>
+              {/*Обложка если нужна*/}
+              {cover && <CardMedia className={classes.detailsRightMedia} image={cover} />}
+            </div>
           </div>
-          {/*Данные с права с верху.*/}
-          <div className={classes.detailsRight}>
-            {/*Обложка если нужна*/}
-            {cover && <CardMedia className={classes.detailsRightMedia} image={cover} />}
-          </div>
-        </div>
-        {/*Кнопка раскрытия основных данных если нужна.*/}
-        {contentMain && (
-          <CardActions className={classes.actionsBottom}>
-            <IconButton
-              className={classNames(classes.expand, {
-                [classes.expandOpen]: expandMain
-              })}
-              onClick={handleExpandMainClick}
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions>
-        )}
-        {/*Данные с низу если нужны.*/}
-        {contentMain && (
-          <Collapse in={expandMain} timeout="auto">
-            <CardContent className={classes.contentMain}>
-              {/*Основные данные*/}
-              <Typography className={classes.contentMainLeft}>{contentMain}</Typography>
-              {/*Дополнительные данные если нужны.*/}
-              {contentMainAdditional && (
-                <Typography variant="caption" className={classes.contentMainRight}>
-                  {contentMainAdditional}
-                </Typography>
-              )}
-            </CardContent>
-          </Collapse>
-        )}
-      </Card>
+          {/*Кнопка раскрытия основных данных если нужна.*/}
+          {contentMain && (
+            <CardActions className={classes.actionsBottom}>
+              <IconButton
+                className={classNames(classes.expand, {
+                  [classes.expandOpen]: expandMain
+                })}
+                onClick={handleExpandMainClick}
+              >
+                <ExpandMoreIcon />
+              </IconButton>
+            </CardActions>
+          )}
+          {/*Данные с низу если нужны.*/}
+          {contentMain && (
+            <Collapse in={expandMain} timeout="auto">
+              <CardContent className={classes.contentMain}>
+                {/*Основные данные*/}
+                <Typography className={classes.contentMainLeft}>{contentMain}</Typography>
+                {/*Дополнительные данные если нужны.*/}
+                {contentMainAdditional && (
+                  <Typography variant="caption" className={classes.contentMainRight}>
+                    {contentMainAdditional}
+                  </Typography>
+                )}
+              </CardContent>
+            </Collapse>
+          )}
+        </Card>
+      </Badge>
     );
   }
 }

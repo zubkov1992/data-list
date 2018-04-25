@@ -10,7 +10,8 @@ import Icons from 'material-ui/Icon';
 
 storiesOf('CardDataMaster', module).add('card example', () => (
   <CardDataMaster
-    caption={'Статус'}
+    badge={'Непрочитано'}
+    caption={'Форма'}
     headline={'Автор'}
     title={'Название'}
     subheading={
@@ -20,7 +21,7 @@ storiesOf('CardDataMaster', module).add('card example', () => (
     }
     contentMain={'Описание книги. '.repeat(60)}
     cover={'http://files.book.andrei-server.ru/image/17982ac3-3451-4f86-8ce6-be54871dcf1d.jpg'}
-    captionColor={'primary'}
+    badgeColor={'teal'}
     actions={
       <div>
         <IconButton>

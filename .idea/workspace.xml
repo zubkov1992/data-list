@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c3f43d1-24e0-4032-8d8c-564cdff4b6e7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CardDataMaster/CardDataMaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CardDataMaster/CardDataMaster.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js" afterDir="false" />
     </list>
@@ -29,14 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CardDataMaster.stories.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js">
+      <file leaf-file-name="CardDataMaster.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -54,9 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>anchor</find>
-      <find>mailFolderListItems</find>
-      <find>menuButton</find>
       <find>expanded</find>
       <find>webstorm</find>
       <find>Navbar</find>
@@ -74,7 +69,6 @@
       <find>headline</find>
       <find>color</find>
       <find>par</find>
-      <find>className</find>
       <find>classNames</find>
       <find>classnames</find>
       <find>classes</find>
@@ -84,6 +78,10 @@
       <find>caption</find>
       <find>subheading</find>
       <find>ExpandMoreIcon</find>
+      <find>zIndex</find>
+      <find>className</find>
+      <find>classes=</find>
+      <find>Color</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -92,6 +90,7 @@
       <dir>$PROJECT_DIR$/node_modules</dir>
       <dir>$PROJECT_DIR$/node_modules/react-scripts</dir>
       <dir>$PROJECT_DIR$/node_modules/@storybook/react/src/server</dir>
+      <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -154,8 +153,8 @@
         <option value="$PROJECT_DIR$/src/ListMultiLight/ListItemMultiLight.js" />
         <option value="$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.js" />
         <option value="$PROJECT_DIR$/src/ListMultiLight/ListTextMultiLight.js" />
-        <option value="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" />
         <option value="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js" />
+        <option value="$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js" />
       </list>
     </option>
   </component>
@@ -198,8 +197,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="570" />
-    <option name="width" value="1350" />
+    <option name="width" value="960" />
     <option name="height" value="1061" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -208,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,6 +251,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,8 +271,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -303,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.storybook">
     <configuration name="debug" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000/" />
     <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -403,7 +403,21 @@
       <workItem from="1524039148488" duration="178000" />
       <workItem from="1524232246940" duration="235000" />
       <workItem from="1524232904377" duration="240000" />
-      <workItem from="1524296202724" duration="6048000" />
+      <workItem from="1524296202724" duration="6542000" />
+      <workItem from="1524330210334" duration="4617000" />
+      <workItem from="1524368331721" duration="935000" />
+      <workItem from="1524388067874" duration="123000" />
+      <workItem from="1524390925977" duration="17000" />
+      <workItem from="1524390974603" duration="14000" />
+      <workItem from="1524579730877" duration="49000" />
+      <workItem from="1524619841639" duration="237000" />
+      <workItem from="1524620270110" duration="53000" />
+      <workItem from="1524626875722" duration="635000" />
+      <workItem from="1524627529112" duration="546000" />
+      <workItem from="1524628553427" duration="39000" />
+      <workItem from="1524628613519" duration="860000" />
+      <workItem from="1524638893193" duration="131000" />
+      <workItem from="1524640551922" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="Дополнение package.json">
       <created>1522946212603</created>
@@ -685,23 +699,30 @@
       <option name="project" value="LOCAL" />
       <updated>1524233094078</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Модификация компонета .">
+      <created>1524310006512</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1524310006512</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176872000" />
+    <option name="totallyTimeSpent" value="185711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-18" width="1924" height="1081" extended-state="6" />
+    <frame x="-1" y="-17" width="1922" height="1079" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6565774" visible="true" weight="0.2125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6565774" visible="true" weight="0.17518248" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50104165" side_tool="true" weight="0.20788178" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
       <window_info id="npm" order="2" sideWeight="0.3434226" side_tool="true" weight="0.2125" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921012" visible="true" weight="0.15369458" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921012" weight="0.15270936" />
       <window_info id="Structure" order="1" sideWeight="0.40944883" side_tool="true" weight="0.16745655" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49895832" weight="0.20689656" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -786,7 +807,8 @@
     <MESSAGE value="Исправление ошибки." />
     <MESSAGE value="Новый компонент." />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Модификация компонета ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Модификация компонета ." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1056,20 +1078,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DrawerPages/DrawerPages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ListMultiLight/ListMultiLight.stories.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1091,19 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1908">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1114,13 +1113,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawerPages/DrawerPages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.stories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardDataMaster/CardDataMaster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
